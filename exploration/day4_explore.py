@@ -19,3 +19,15 @@ print("\n" + "="*80+'\n')
 print(pbp_pandas.info())
 """
 #above outputs verified, now checking important stats
+
+# Just the columns you need to document
+target_cols = ['epa', 'wp', 'wpa', 'vegas_wp', 'down', 'ydstogo', 'yardline_100', 
+               'game_seconds_remaining', 'score_differential', 
+               'play_type', 'pass', 'rush', 'xpass', 'pass_oe', 'success', 
+               'yards_gained']
+
+pd.set_option('display.max_columns', None)  # Show all columns
+#pd.set_option('display.width', None)  # Use full terminal width
+
+# Show first 20 rows for these columns
+print(pbp_pandas[target_cols].head(20))
